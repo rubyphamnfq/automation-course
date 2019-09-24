@@ -48,6 +48,8 @@ public class BasePage {
 	}
 	
 	protected void dragAndDrop(WebElement sourceElement, WebElement targetElement) {
+		checkNotNull("Source", sourceElement);
+		checkNotNull("Target", targetElement);
 		Actions action = new Actions(driver);
 		action.dragAndDrop(sourceElement, targetElement).build().perform();
 	}
