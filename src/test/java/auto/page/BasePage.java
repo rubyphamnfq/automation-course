@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class BasePage {
 	protected WebDriver driver;
@@ -41,4 +42,13 @@ public class BasePage {
 		assertNotNull("Element " + name + "should be in the view", webElement);
 	}
 
+	public void navigate(String url) {
+		driver.get(url);
+		
+	}
+	
+	protected void dragAndDrop(WebElement sourceElement, WebElement targetElement) {
+		Actions action = new Actions(driver);
+		action.dragAndDrop(sourceElement, targetElement).build().perform();
+	}
 }
