@@ -8,4 +8,9 @@ public class NewAccountPage extends BasePage {
 		super(driver);
 	}
 
+	public void createAcc(String customerId) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

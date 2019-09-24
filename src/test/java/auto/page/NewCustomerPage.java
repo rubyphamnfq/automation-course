@@ -8,4 +8,14 @@ public class NewCustomerPage extends BasePage {
 		super(driver);
 	}
 
+	public void createCustomer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getCustomerId() {
+String customerID = null; //getCustomer Id
+		return customerID;
+	}
+
 }
