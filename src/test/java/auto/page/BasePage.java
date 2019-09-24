@@ -39,7 +39,7 @@ public class BasePage {
 	}
 
 	protected void checkNotNull(String name, WebElement webElement) {
-		assertNotNull("Element " + name + "should be in the view", webElement);
+		assertNotNull("Element " + name + " should be in the view.", webElement);
 	}
 
 	public void navigate(String url) {
@@ -48,6 +48,8 @@ public class BasePage {
 	}
 	
 	protected void dragAndDrop(WebElement sourceElement, WebElement targetElement) {
+		checkNotNull("Source", sourceElement);
+		checkNotNull("Target", targetElement);
 		Actions action = new Actions(driver);
 		action.dragAndDrop(sourceElement, targetElement).build().perform();
 	}

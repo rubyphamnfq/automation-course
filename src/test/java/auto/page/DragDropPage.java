@@ -10,7 +10,7 @@ public class DragDropPage extends BasePage {
 		super(driver);
 	}
 
-	private String sourceBtn = "//li[@id=\"fourth\"]/*[normalize-space(text())=\"%s\"]";
+	private String sourceBtn = "//li/*[normalize-space(text())=\"%s\"]";
 	private String targetBox = "//*[normalize-space(text())=\"%s SIDE\"]/following-sibling::*//*[normalize-space(text())=\"%s\"]/following-sibling::*//*[contains(@class,\"ui-droppable\")]";
 
 	public void dragToBox(String sourceBtnName, String cardType, String targetType) {
