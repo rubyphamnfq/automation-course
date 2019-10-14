@@ -9,12 +9,12 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import auto.page.BasePage;
-import auto.page.DragDropPage;
-import auto.page.HomePage;
-import auto.page.NewAccountPage;
-import auto.page.NewCustomerPage;
-import auto.page.NewCustomizedStatementPage;
+import bdd.test.page.BasePage;
+import bdd.test.page.DragDropPage;
+import bdd.test.page.HomePage;
+import bdd.test.page.NewAccountPage;
+import bdd.test.page.NewCustomerPage;
+import bdd.test.page.NewCustomizedStatementPage;
 
 public class BaseTest {
 	private WebDriver driver;
