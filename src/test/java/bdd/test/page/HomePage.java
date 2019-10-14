@@ -1,4 +1,4 @@
-package auto.page;
+package bdd.test.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

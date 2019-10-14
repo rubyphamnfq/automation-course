@@ -1,4 +1,4 @@
-package auto.page;
+package bdd.test.page;
 
 import org.openqa.selenium.WebDriver;
 
@@ -8,6 +8,7 @@ public class NewCustomerPage extends BasePage {
 		super(driver);
 	}
 
+	
 	public void createCustomer() {
 		// TODO Auto-generated method stub
 		
