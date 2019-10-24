@@ -6,9 +6,6 @@ import org.openqa.selenium.WebElement;
 
 public class DragDropPage extends BasePage {
 
-	public DragDropPage(WebDriver driver) {
-		super(driver);
-	}
 
 	private String sourceBtn = "//li/*[normalize-space(text())=\"%s\"]";
 	private String targetBox = "//*[normalize-space(text())=\"%s SIDE\"]/following-sibling::*//*[normalize-space(text())=\"%s\"]/following-sibling::*//*[contains(@class,\"ui-droppable\")]";

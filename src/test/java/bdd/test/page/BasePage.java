@@ -8,13 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class BasePage  {
-	protected WebDriver driver;
+import net.serenitybdd.core.pages.PageObject;
 
-	public BasePage(WebDriver driver) {
-		super();
-		this.driver = driver;
-	}
+public class BasePage  extends  PageObject{
+
 
 	public void wait(int seconds) {
 		try {
@@ -26,7 +23,7 @@ public class BasePage  {
 
 	protected WebElement findElement(By by) {
 		try {
-			return driver.findElement(by);
+			return getDriver().findElement(by);
 
 		} catch (Exception e) {
 			System.out.println(e);
@@ -45,14 +42,14 @@ public class BasePage  {
 
 	@Given("I navigate '$url'")
 	public void navigate(String url) {
-		driver.get(url);
+		getDriver().get(url);
 
 	}
 
 	protected void dragAndDrop(WebElement sourceElement, WebElement targetElement) {
 		checkNotNull("Source", sourceElement);
 		checkNotNull("Target", targetElement);
-		Actions action = new Actions(driver);
+		Actions action = new Actions(getDriver());
 		action.dragAndDrop(sourceElement, targetElement).build().perform();
 	}
 }
